@@ -4,10 +4,16 @@ Alumno::Alumno(std::string nombre, int edad, Curso c, Escuela e)
 {
     _nombre = nombre;
     _edad   = edad;
-    cAlumno->Ano = c.Ano;
-    cAlumno->Curso = c.Curso;
-    eAlumno->nombre = e.nombre;
-    eAlumno->numero_escuela = e.numero_escuela;
+    ////////C++2011///////////////////////
+    //cAlumno->Ano = c.Ano;
+    //cAlumno->Curso = c.Curso;
+    //eAlumno->nombre = e.nombre;
+    //eAlumno->numero_escuela = e.numero_escuela;
+    ///////C++1998////////////////////////
+    cAlumno.Ano = c.Ano;
+    cAlumno.Curso = c.Curso;
+    eAlumno.nombre = e.nombre;
+    eAlumno.numero_escuela = e.numero_escuela;
 }
 
 Alumno::~Alumno()
@@ -19,9 +25,14 @@ void Alumno::MostrarDatos()
 {
     std::cout<<"Nombre del almuno: "<<_nombre<<std::endl;
     std::cout<<"Edad: "<<_edad<<std::endl;
-    std::cout<<"Curso "<<cAlumno->Ano<<"° "<<cAlumno->Curso<<"°\n";
-    std::cout<<"Escuela: "<<eAlumno->nombre<<std::endl;
-    std::cout<<"         N°"<<eAlumno->numero_escuela<<std::endl;
+    //////////////C++2011///////////////////////
+    //std::cout<<"Curso "<<cAlumno->Ano<<"° "<<cAlumno->Curso<<"°\n";
+    //std::cout<<"Escuela: "<<eAlumno->nombre<<std::endl;
+    //std::cout<<"         N°"<<eAlumno->numero_escuela<<std::endl;
+    /////////////C++1998////////////////////////
+    std::cout<<"Curso "<<cAlumno.Ano<<"° "<<cAlumno.Curso<<"°\n";
+    std::cout<<"Escuela: "<<eAlumno.nombre<<std::endl;
+    std::cout<<"         N°"<<eAlumno.numero_escuela<<std::endl;
 }
 
 std::string Alumno::NivelEscolar()

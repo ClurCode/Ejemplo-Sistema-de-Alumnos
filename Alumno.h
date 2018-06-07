@@ -16,8 +16,11 @@ class Alumno
     private:
         std::string _nombre;
         int _edad;
-        Curso* cAlumno = new Curso;
-        Escuela* eAlumno = new Escuela;
+        //Curso* cAlumno = new Curso; // C++2011 o mas para compilar
+        //Escuela* eAlumno = new Escuela; // c++2011 o ma spara compilar
+        ///////////Para anteriores a C++2011/////////////
+        Curso cAlumno;
+        Escuela eAlumno;
 };
 
 #endif // ALUMNO_H
